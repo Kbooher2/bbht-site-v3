@@ -215,6 +215,7 @@ section{padding:100px 0}
 /* Sunwave logo has white text — wrap img in .logo-card so white card stays, then invert+hue-rotate flips white to black while preserving brand colors. Card sized to match other logo boxes. */
 .integ-chip .logo-card{width:150px;height:50px;background:rgba(255,255,255,.97);border-radius:8px;padding:6px 10px;box-sizing:border-box;display:flex;align-items:center;justify-content:center}
 .integ-chip .logo-card img{width:auto;height:auto;max-width:100%;max-height:100%;background:transparent !important;padding:0 !important;border-radius:0 !important;filter:invert(1) hue-rotate(180deg)}
+.integ-intro{margin:0 auto 24px;font-size:15px;color:var(--text-2);text-align:center;max-width:780px;line-height:1.6}
 .integ-disclaimer{margin:36px auto 0;font-size:12px;color:var(--text-3);text-align:center;max-width:720px;font-style:italic;line-height:1.55}
 
 /* ---------- CASE STUDY ---------- */

@@ -101,15 +101,26 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,20,38,.82);backdrop-fil
 .bar:nth-child(6) .s1{height:100px}.bar:nth-child(6) .s2{height:8px}
 .bar .lab{font-size:10px;color:var(--text-3);margin-top:6px}
 
-/* ---------- TRUST STRIP ---------- */
-.trust{padding:50px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(0,0,0,.15)}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
-.trust .v{font-size:36px;color:#fff;font-weight:700;letter-spacing:-.02em}
-.trust .v .accent{color:var(--cyan)}
-.trust .l{font-size:13px;color:var(--text-2);margin-top:4px}
+/* ---------- TRUST STRIP (v1.5: brightened, the moat made visible) ---------- */
+.trust{padding:64px 0;border-top:1px solid rgba(31,169,217,.18);border-bottom:1px solid rgba(31,169,217,.18);background:linear-gradient(180deg,rgba(31,169,217,.05),rgba(245,200,66,.025));position:relative;overflow:hidden}
+.trust::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 900px 280px at 50% 50%, rgba(31,169,217,.08), transparent 70%);pointer-events:none}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center;position:relative}
+.trust .v{font-size:52px;color:#fff;font-weight:800;letter-spacing:-.025em;text-shadow:0 4px 30px rgba(31,169,217,.22)}
+.trust .v .accent{color:var(--cyan);text-shadow:0 0 24px rgba(31,169,217,.55)}
+.trust .l{font-size:14px;color:var(--text);margin-top:8px;font-weight:500}
 
 /* ---------- SECTIONS ---------- */
 section{padding:100px 0}
+/* v1.5: lift sections used for dense content (Problem, Modules) — softer dark navy that reads easier */
+section.section-lift{background:linear-gradient(180deg,#1A2238 0%, #131C30 100%);position:relative}
+section.section-lift::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, rgba(31,169,217,.22), transparent)}
+section.section-lift::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, rgba(31,169,217,.12), transparent)}
+section.section-lift .problem-card{background:var(--surface-2);border-color:rgba(31,169,217,.15);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+section.section-lift .problem-card:hover{border-color:var(--cyan);transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.32), 0 0 0 1px rgba(31,169,217,.22)}
+section.section-lift .problem-card .lbl{color:var(--text)}
+section.section-lift .problem-list .row{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.1)}
+section.section-lift .feature{background:var(--surface-2);border:1px solid rgba(31,169,217,.12);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+section.section-lift .feature:hover{border-color:var(--cyan);transform:translateY(-3px);box-shadow:0 14px 32px rgba(0,0,0,.32), 0 0 0 1px rgba(31,169,217,.22)}
 .section-head{text-align:center;max-width:760px;margin:0 auto 60px}
 .section-head .eyebrow,.eyebrow-pill{display:inline-block;padding:5px 12px;background:rgba(31,169,217,.12);border:1px solid rgba(31,169,217,.3);border-radius:999px;font-size:12px;color:var(--cyan);letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;font-weight:500}
 .section-head h2{font-size:46px;color:#fff;letter-spacing:-.025em;margin:0 0 16px;font-weight:700;line-height:1.1}

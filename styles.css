@@ -329,3 +329,184 @@ footer{padding:48px 0 28px;border-top:1px solid var(--line);font-size:13px;color
   .trust-grid,.features,.problem-grid,.ioa-grid,.team-grid,.roadmap,.testimonial-grid,.problem-list,.case-nums{grid-template-columns:1fr}
   .integ-marquee{grid-template-columns:repeat(2,1fr)}
 }
+
+/* Theme Toggle Button for Nav */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 9px;
+  border: 1px solid var(--line-2);
+  background: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all .15s;
+  margin-right: 10px;
+}
+.theme-toggle:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* ===========================================================
+   LIGHT THEME OVERRIDES FOR V3
+   =========================================================== */
+:root[data-theme="light"] {
+  --bg: #F5F8FC;
+  --bg-2: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F1F5F9;
+  --cyan: #1E74B3; /* Darker cyan for text readability */
+  --cyan-dim: #155E93;
+  --cyan-glow: rgba(30, 116, 179, 0.15);
+  --gold: #C28E00; /* Darker gold for text readability */
+  --text: #1E293B;
+  --text-2: #475569;
+  --text-3: #64748B;
+  --line: rgba(15, 25, 43, 0.08);
+  --line-2: rgba(15, 25, 43, 0.14);
+}
+
+/* Light Theme overrides for hardcoded dark/light elements */
+:root[data-theme="light"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+:root[data-theme="light"] h1,
+:root[data-theme="light"] h2,
+:root[data-theme="light"] h3,
+:root[data-theme="light"] h4,
+:root[data-theme="light"] .hero h1,
+:root[data-theme="light"] .section-head h2,
+:root[data-theme="light"] .feature h3,
+:root[data-theme="light"] .case-text h3,
+:root[data-theme="light"] .cta h2,
+:root[data-theme="light"] .ps-main h2,
+:root[data-theme="light"] .chart-title,
+:root[data-theme="light"] .kpi .v,
+:root[data-theme="light"] .case-nums .v,
+:root[data-theme="light"] .trust .v,
+:root[data-theme="light"] .agent .nm,
+:root[data-theme="light"] .logo,
+:root[data-theme="light"] .mock-row b,
+:root[data-theme="light"] .problem-card .big,
+:root[data-theme="light"] .ps-side .it.active,
+:root[data-theme="light"] .qs-tab.active,
+:root[data-theme="light"] .denials-list b,
+:root[data-theme="light"] .pfr-total,
+:root[data-theme="light"] .pfr-total span,
+:root[data-theme="light"] .denials-list .d-it b,
+:root[data-theme="light"] .testimonial .who b,
+:root[data-theme="light"] .problem-list b,
+:root[data-theme="light"] .problem-list .row b,
+:root[data-theme="light"] .problem-list p b,
+:root[data-theme="light"] #case-study h3,
+:root[data-theme="light"] .contact-direct,
+:root[data-theme="light"] [style*="color:#fff"],
+:root[data-theme="light"] [style*="color: #fff"] {
+  color: #0F172A !important;
+}
+
+:root[data-theme="light"] nav {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+:root[data-theme="light"] .nav-links a:hover,
+:root[data-theme="light"] .nav-links a.active {
+  background: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+
+:root[data-theme="light"] .btn-ghost {
+  color: var(--text) !important;
+  border-color: var(--line-2) !important;
+}
+
+:root[data-theme="light"] .btn-ghost:hover {
+  background: #F1F5F9 !important;
+  border-color: var(--cyan) !important;
+}
+
+:root[data-theme="light"] section.section-lift {
+  background: linear-gradient(180deg, #E2E8F0 0%, #F1F5F9 100%) !important;
+}
+:root[data-theme="light"] section.section-lift::before {
+  background: linear-gradient(90deg, transparent, rgba(30, 116, 179, 0.12), transparent) !important;
+}
+:root[data-theme="light"] section.section-lift::after {
+  background: linear-gradient(90deg, transparent, rgba(30, 116, 179, 0.08), transparent) !important;
+}
+
+:root[data-theme="light"] .trust {
+  background: rgba(30, 116, 179, 0.03) !important;
+  border-top: 1px solid rgba(30, 116, 179, 0.12) !important;
+  border-bottom: 1px solid rgba(30, 116, 179, 0.12) !important;
+}
+
+:root[data-theme="light"] .ioa-frame {
+  background: rgba(30, 116, 179, 0.02) !important;
+}
+
+:root[data-theme="light"] .product-shot {
+  background: #FFFFFF !important;
+  box-shadow: 0 40px 80px rgba(15, 25, 43, 0.08), 0 0 0 1px rgba(15, 25, 43, 0.05), 0 0 100px rgba(30, 116, 179, 0.08) !important;
+}
+
+:root[data-theme="light"] .ps-chrome {
+  background: rgba(15, 25, 43, 0.02) !important;
+}
+
+:root[data-theme="light"] .ps-side {
+  background: rgba(15, 25, 43, 0.03) !important;
+}
+
+:root[data-theme="light"] .ps-url {
+  background: rgba(15, 25, 43, 0.04) !important;
+}
+
+:root[data-theme="light"] .qs-pie::after {
+  background: #FFFFFF !important;
+}
+
+:root[data-theme="light"] .case-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, rgba(30, 116, 179, 0.05) 100%) !important;
+}
+
+:root[data-theme="light"] .case-nums .item {
+  background: #FFFFFF !important;
+  border-color: var(--line) !important;
+}
+
+:root[data-theme="light"] .case-nums .item.big {
+  background: linear-gradient(135deg, rgba(30, 116, 179, 0.08), rgba(194, 142, 0, 0.04)) !important;
+}
+
+:root[data-theme="light"] .cta {
+  background: linear-gradient(135deg, #F5F8FC 0%, rgba(30, 116, 179, 0.06) 100%) !important;
+}
+
+:root[data-theme="light"] footer {
+  background: rgba(15, 25, 43, 0.03) !important;
+}
+
+:root[data-theme="light"] .agent {
+  background: rgba(15, 25, 43, 0.02) !important;
+}
+
+:root[data-theme="light"] .feature .mock {
+  background: rgba(15, 25, 43, 0.03) !important;
+}
+
+:root[data-theme="light"] .qs-mock {
+  background: rgba(15, 25, 43, 0.03) !important;
+}

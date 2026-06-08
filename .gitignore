@@ -1,0 +1,18 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+.vscode/
+
+# Local previews
+node_modules/
+.netlify/
+.cloudflare/
+
+# Backup / temp
+*.bak
+*.tmp
+*.orig

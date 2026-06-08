@@ -17,7 +17,7 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="/" class="logo"><div class="logo-mark">BB</div>HealthTech</a>
+    <a href="#" class="logo-toggle" title="Click to toggle light/dark background logo demo" style="cursor:pointer; display:flex; align-items:center;"><img id="main-logo" src="logos/bb_healthtech_logo_dark_bg.png" alt="BB HealthTech" style="height: 32px; object-fit: contain;"></a>
     <div class="nav-links">
       <a href="/" class="active">Home</a>
       <a href="platform.html">Platform</a>
@@ -386,7 +386,7 @@
 
 <footer>
   <div class="container foot">
-    <div class="logo"><div class="logo-mark">BB</div>HealthTech</div>
+    <img src="logos/bb_healthtech_logo_dark_bg.png" alt="HealthTech Logo" style="height: 32px; object-fit: contain;">
     <div class="foot-links">
       <a href="platform.html">Platform</a>
       <a href="company.html">Company</a>
@@ -397,6 +397,35 @@
     <div>© 2026 BB HealthTech · Support@BBHealthTech.com · 1-(800)-960-0987</div>
   </div>
 </footer>
+
+
+<script>
+  document.querySelector('.logo-toggle').addEventListener('click', function(e) {
+      e.preventDefault();
+      const logoImg = document.getElementById('main-logo');
+      const nav = document.querySelector('nav');
+      const btnGhost = nav.querySelector('.btn-ghost');
+      if (logoImg.src.includes('dark_bg')) {
+          logoImg.src = 'logos/bb_healthtech_logo_light_bg.png';
+          nav.style.background = 'rgba(255, 255, 255, 0.95)';
+          nav.style.borderBottom = '1px solid #cbd5e1';
+          document.querySelectorAll('.nav-links a').forEach(a => a.style.color = '#475569');
+          if (btnGhost) {
+              btnGhost.style.color = '#1e293b';
+              btnGhost.style.borderColor = '#cbd5e1';
+          }
+      } else {
+          logoImg.src = 'logos/bb_healthtech_logo_dark_bg.png';
+          nav.style.background = 'rgba(10, 20, 38, 0.82)';
+          nav.style.borderBottom = '1px solid var(--line)';
+          document.querySelectorAll('.nav-links a').forEach(a => a.style.color = 'var(--text-2)');
+          if (btnGhost) {
+              btnGhost.style.color = 'var(--text)';
+              btnGhost.style.borderColor = 'var(--line-2)';
+          }
+      }
+  });
+</script>
 
 </body>
 </html>
